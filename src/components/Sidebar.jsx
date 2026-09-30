@@ -27,7 +27,7 @@ const Sidebar = () => {
     .toUpperCase();
 
   return (
-    <aside className="w-80 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white flex flex-col flex-shrink-0 border-r border-slate-800">
+    <aside className="hidden lg:flex w-80 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white flex-col flex-shrink-0 border-r border-slate-800">
       {/* Logo */}
       <div className="px-6 py-4 border-b border-slate-800/50">
         <div className="flex items-center gap-6">

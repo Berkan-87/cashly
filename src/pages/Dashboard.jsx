@@ -154,13 +154,13 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="p-6 space-y-6 fade-in">
+    <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 fade-in">
       <div>
         <h1 className="text-3xl font-bold text-slate-800">Dashboard</h1>
         <p className="text-slate-500 mt-1">Overview of your financial status</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {kpiCards.map((kpi, idx) => {
           const Icon = kpi.icon;
           return (
@@ -182,10 +182,10 @@ const Dashboard = () => {
         })}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
         <div className="lg:col-span-2 bg-white rounded-xl p-6 border border-slate-200">
           <h2 className="text-lg font-bold text-slate-800 mb-4">Monthly Income / Expenses</h2>
-          <div style={{ width: '100%', height: 300 }}>
+          <div className="w-full h-64 sm:h-72">
             <ResponsiveContainer>
               <BarChart data={monthlyData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -234,7 +234,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 border border-indigo-200">
           <h3 className="text-sm font-semibold text-indigo-900 uppercase tracking-wide">
             🏆 Top Customer
@@ -295,7 +295,7 @@ const Dashboard = () => {
       </div>
 
       <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-        <div className="p-5 border-b border-slate-200">
+        <div className="p-4 sm:p-5 border-b border-slate-200">
           <h2 className="text-lg font-bold text-slate-800">Recent Transactions</h2>
         </div>
         {transactions.length > 0 ? (

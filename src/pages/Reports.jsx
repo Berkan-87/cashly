@@ -210,9 +210,9 @@ const Reports = () => {
   };
 
   return (
-    <div className="p-6 space-y-6 fade-in">
+    <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 fade-in">
       {/* Başlık */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-800">Reports</h1>
           <p className="text-slate-500 mt-1">Annual financial summary and analysis</p>
@@ -238,7 +238,7 @@ const Reports = () => {
       </div>
 
       {/* Yıllık Özet Kartları */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div className="bg-white rounded-xl p-5 border border-slate-200">
           <div className="flex items-center justify-between">
             <div>
@@ -308,7 +308,7 @@ const Reports = () => {
           <BarChart3 className="w-5 h-5 text-indigo-600" />
           Monthly Trend — {selectedYear}
         </h2>
-        <div style={{ width: '100%', height: 320 }}>
+        <div className="w-full h-64 sm:h-80">
           <ResponsiveContainer>
             <LineChart data={monthlyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -380,7 +380,7 @@ const Reports = () => {
           </h2>
           {categoryData.length > 0 ? (
             <>
-              <div style={{ width: '100%', height: 280 }}>
+              <div className="w-full h-56 sm:h-72">
                 <ResponsiveContainer>
                   <PieChart>
                     <Pie

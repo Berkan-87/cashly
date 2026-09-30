@@ -76,7 +76,7 @@ const Settings = () => {
   const currentCurrency = getCurrencyInfo(localSettings.currency);
 
   return (
-    <div className="p-6 space-y-6 fade-in max-w-4xl">
+    <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 fade-in max-w-4xl">
       {/* Başlık */}
       <div>
         <h1 className="text-3xl font-bold text-slate-800">Settings</h1>
@@ -133,7 +133,7 @@ const Settings = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
               {(showAllCurrencies ? allCurrencies : featuredCurrencies).map((c) => (
                 <button
                   key={c.code}
@@ -209,7 +209,7 @@ const Settings = () => {
 
       {/* Kaydet Butonu */}
       {hasChanges && (
-        <div className="sticky bottom-4 bg-white rounded-xl border border-indigo-200 p-4 shadow-lg flex items-center justify-between fade-in">
+        <div className="sticky bottom-4 bg-white rounded-xl border border-indigo-200 p-3 sm:p-4 shadow-lg flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-0 fade-in mx-2">
           <p className="text-sm text-slate-600 font-medium">
             You have unsaved changes
           </p>

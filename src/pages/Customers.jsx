@@ -148,7 +148,7 @@ const Customers = () => {
     : null;
 
   return (
-    <div className="p-6 space-y-6 fade-in">
+    <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 fade-in">
       {/* Başlık */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -165,7 +165,7 @@ const Customers = () => {
       </div>
 
       {/* Özet Kartları */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-3 sm:gap-4">
         <div className="bg-white rounded-xl p-4 border border-slate-200">
           <div className="flex items-center gap-2 text-slate-500 text-sm">
             <Users className="w-4 h-4" />
@@ -220,7 +220,7 @@ const Customers = () => {
 
       {/* Müşteri Listesi */}
       {filteredCustomers.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredCustomers.map((customer) => (
             <div
               key={customer.id}
@@ -306,7 +306,7 @@ const Customers = () => {
       {/* Ekleme/Düzenleme Modalı */}
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto mx-2">
             <div className="p-6 border-b border-slate-200 flex items-center justify-between">
               <h2 className="text-xl font-bold text-slate-800">
                 {editingCustomer ? 'Edit Customer' : 'New Customer'}
